@@ -30,7 +30,7 @@ const TopArrow = () => {
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
         onClick={scrollToTop}
-        className="fixed bottom-10 right-10 cursor-pointer px-2 py-3 bg-darkBlue text-darkBlueText rounded-lg drop-shadow-2xl shadow-2xl"
+        className="fixed bottom-10 right-10 cursor-pointer px-2 py-3 bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue rounded-lg drop-shadow-2xl shadow-2xl"
       >
         <motion.svg
           initial={{ y: -10 }}
@@ -46,7 +46,7 @@ const TopArrow = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-6 w-6 text-white"
+          className="h-6 w-6 text-darkBlueText dark:text-white"
         >
           <path
             strokeLinecap="round"

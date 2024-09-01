@@ -8,7 +8,6 @@ const AppBody = () => {
   const hasMoreData = showData.length < data.length;
 
   const [inputChange, setInputChange] = useState("");
-  const [selectChange, setSelectChange] = useState(null);
 
   useEffect(() => {
     loadMore();
@@ -24,7 +23,6 @@ const AppBody = () => {
   };
 
   const handleSelectChange = (e) => {
-    setSelectChange(e.target.value);
     filterData(e.target.value);
     if (e.target.value === "All") {
       resetShowData();
@@ -35,7 +33,7 @@ const AppBody = () => {
   return (
     <div className="">
       <div className="my-10 flex  justify-between gap-5 flex-wrap w-full">
-        <div className="flex   bg-darkBlue p-3 gap-3 rounded-md drop-shadow-lg">
+        <div className="flex  bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue p-3 gap-3 rounded-md drop-shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -60,7 +58,7 @@ const AppBody = () => {
         </div>
         <select
           name="country"
-          className="bg-darkBlue  outline-none p-3  rounded-md drop-shadow-lg"
+          className="bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue  outline-none p-3  rounded-md drop-shadow-lg"
           onChange={handleSelectChange}
         >
           <option value="" disabled>
@@ -83,7 +81,7 @@ const AppBody = () => {
       {hasMoreData && (
         <button
           onClick={loadMore}
-          className="bg-darkBlue px-7 py-2 rounded-lg shadow-xl mb-4"
+          className="bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue px-7 py-2 rounded-lg shadow-xl mb-4"
         >
           Load More ...
         </button>

@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const Layout = () => {
   return (
-    <div className="bg-darkBlueBg  font-sans">
+    <div className=" bg-lightGrayBg dark:bg-darkBlueBg  font-sans">
       <NavBar />
       <Outlet />
     </div>

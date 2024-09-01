@@ -29,7 +29,7 @@ const Detail = () => {
       <div className="my-10 lg:my-20 flex  gap-2">
         <button
           onClick={() => navigate("/")}
-          className=" flex items-center gap-2 bg-darkBlue shadow-lg rounded-lg px-3 py-2"
+          className=" flex items-center gap-2 bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue shadow-lg rounded-lg px-3 py-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const Detail = () => {
         </button>
         <button
           onClick={() => navigate(-1)}
-          className=" flex gap-2 bg-darkBlue shadow-lg rounded-lg px-7 py-2"
+          className=" flex gap-2 bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue shadow-lg rounded-lg px-7 py-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const Detail = () => {
           <img src={country.flags.png} className="" alt={country.name} />
         </div>
         <div>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-7">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-7 text-darkBlueText dark:text-white">
             {country.name}
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
@@ -100,7 +100,7 @@ const Detail = () => {
                   disabled={border.name === "No borders"}
                   onClick={() => navigate(`/${border.name}`)}
                   key={index}
-                  className="text-white bg-darkBlue px-6 py-1 rounded-md shadow-xl  mr-3"
+                  className="bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue px-6 py-1 rounded-md shadow-xl  mr-3"
                 >
                   {border.name}
                 </button>

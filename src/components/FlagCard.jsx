@@ -3,7 +3,7 @@ import Tags from "./Tags";
 
 const FlagCard = ({ country }) => {
   return (
-    <div className=" bg-darkBlue rounded-lg shadow-lg ">
+    <div className=" bg-lightGrayBg text-darkBlueText dark:text-white dark:bg-darkBlue rounded-lg shadow-lg ">
       <Link to={`/${country.name}`}>
         <img
           src={country.flags.png}
